@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+medical_procedures_json = File.read('db/seed_data/medical_procedures.json')
+medical_procedures = JSON.parse(medical_procedures_json)
+medical_procedures.each do |name|
+  MedicalProcedure.create(name: name)
+end
