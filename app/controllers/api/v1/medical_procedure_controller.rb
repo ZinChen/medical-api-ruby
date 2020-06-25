@@ -8,7 +8,7 @@ class Api::V1::MedicalProcedureController < ApplicationController
     if procedure
       render json: procedure
     else
-      render json: procedure.errors
+      render json: { error: "item not found"}
     end
   end
 
@@ -24,6 +24,6 @@ class Api::V1::MedicalProcedureController < ApplicationController
   end
 
   def procedure
-    @procedure ||= MedicalProcedure.find(params[:id])
+    @procedure ||= MedicalProcedure.find_by_id(params[:id])
   end
 end
