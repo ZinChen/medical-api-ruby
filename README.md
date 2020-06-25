@@ -1,24 +1,21 @@
-# README
+# Medical Api Ruby
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Endpoints
 
-Things you may want to cover:
+&nbsp;
 
-* Ruby version
+### <https://medical-api-ruby.herokuapp.com/api/v1/medical_procedure>
+Full list of medical procedures
 
-* System dependencies
+&nbsp;
 
-* Configuration
+### <https://medical-api-ruby.herokuapp.com/api/v1/medical_procedure/10>
 
-* Database creation
+Get procedure info by id
 
-* Database initialization
+&nbsp;
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### <https://medical-api-ruby.herokuapp.com/api/v1/medical_procedure/search?q=gen>
 
-* Deployment instructions
-
-* ...
+Search procedures by name. Procedures with names, started with query will be before others
